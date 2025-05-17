@@ -5,12 +5,27 @@
     <title>Danh sách thành viên</title>
     <meta charset="UTF-8">
 </head>
-
+<style>
+    .container {
+        width: 100%;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .container h1{
+        font-size: 35px;
+    }
+    .li{
+        font-size: 25px;
+        list-style-type: none;
+    }
+</style>
 <body>
-    <h1>Danh sách thành viên nhóm 1:</h1>
-    <ul>
-        <li th:each="member : ${members}" th:text="${member.name}"></li>
-    </ul>
+    <div class="container">
+        <h1 >Danh sách thành viên nhóm 1:</h1>
+        <ul>
+            <li class="li" th:each="member : ${members}" th:text="${member.name}"></li>
+        </ul>
+    </div>
 </body>
 
 </html>
