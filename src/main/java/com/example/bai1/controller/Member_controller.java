@@ -19,6 +19,6 @@ public class Member_controller {
                 new Member("Phạm Minh Vũ")
         );
         model.addAttribute("members", members);
-        return "show_members"; // Trả về file templates/printMember.html
+        return "show_members";
     }
 }
