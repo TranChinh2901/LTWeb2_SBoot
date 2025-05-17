@@ -1,12 +1,14 @@
 package com.example.bai1.controller;
 
 import com.example.bai1.model.Member;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Controller
 public class Member_controller {
     @GetMapping("/members")
     public String showMembers(Model model) {
@@ -17,6 +19,6 @@ public class Member_controller {
                 new Member("Phạm Minh Vũ")
         );
         model.addAttribute("members", members);
-        return "printMember"; // Trả về file templates/members.html
+        return "show_members"; // Trả về file templates/printMember.html
     }
 }
